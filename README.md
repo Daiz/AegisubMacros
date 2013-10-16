@@ -1,6 +1,6 @@
 # Introduction
 
-This repository contains various small Aegisub Automation macros that I've written. Idea shamelessly taken from [Lyger's fantastic repository script repository](https://github.com/lyger/Aegisub_automation_scripts). Here are descriptions for the currently available scripts.
+This repository contains various small Aegisub Automation macros that I've written. Idea shamelessly taken from [Lyger's fantastic script repository](https://github.com/lyger/Aegisub_automation_scripts). Here are descriptions for the currently available scripts.
 
 ## cpscalc.lua - CPS Calculator
 
@@ -8,7 +8,7 @@ This script can be used to calculate the characters per second for dialogue. You
 
 ## cmconv.lua - BT.601➡BT.709 Color Converter
 
-If you some scripts with colors matched to video with Aegisub's "Force BT.601" setting turned on (currently on by default, but this will change in Aegisub 3.1) and want to easily convert the colors to BT.709 (what your video most likely is if it isn't sourced from a DVD), this script does the job. Comes with two macros, one that only processes inline color definitions on selected lines, and one that alters all colors everywhere in the script (both in styles and lines).
+If you have some scripts with colors matched to video with Aegisub's "Force BT.601" setting turned on (currently on by default, but this will change in Aegisub 3.1) and want to easily convert the colors to BT.709 (what your video most likely is if it isn't sourced from a DVD), this script does the job. Comes with two macros, one that only processes inline color definitions on selected lines, and one that alters all colors everywhere in the script (both in styles and lines).
 
 ## autoreplacer.lua - Autoreplacer
 
