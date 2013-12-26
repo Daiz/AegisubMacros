@@ -5,7 +5,7 @@ script_description = "Change colors from BT.601 to BT.709."
 script_name_2 = "BT.601 -> BT.709 Global Color Fixer"
 script_description_2 = "Globally change colors from BT.601 to BT.709."
 script_author = "Daiz"
-script_version = "1.0.0"
+script_version = "1.0.1"
 
 local Rec601 = {
   Kr = 0.299,
