@@ -77,6 +77,15 @@ function correct_global(subs, sel, active)
 
   for i = 1, #subs do
     local l = subs[i]
+
+    if l.class == "info" then
+      if l.key == "YCbCr Matrix" then
+        if l.value == "TV.601" then
+          l.value == "TV.709"
+        end
+      end
+    end
+
     if l.class == "style" then
 
       local r, g, b, a = extract_color(l.color1)
