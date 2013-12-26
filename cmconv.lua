@@ -78,19 +78,19 @@ function correct_global(subs, sel, active)
   for i = 1, #subs do
     local l = subs[i]
     if l.class == "style" then
-      
+
       local r, g, b, a = extract_color(l.color1)
       local nr, ng, nb = cm_conv(r, g, b, Rec601, Rec709)
       l.color1 = ass_style_color(nr, ng, nb, a)
-      
+
       r, g, b, a = extract_color(l.color2)
       nr, ng, nb = cm_conv(r, g, b, Rec601, Rec709)
       l.color2 = ass_style_color(nr, ng, nb, a)
-      
+
       r, g, b, a = extract_color(l.color3)
       nr, ng, nb = cm_conv(r, g, b, Rec601, Rec709)
       l.color3 = ass_style_color(nr, ng, nb, a)
-      
+
       r, g, b, a = extract_color(l.color4)
       nr, ng, nb = cm_conv(r, g, b, Rec601, Rec709)
       l.color4 = ass_style_color(nr, ng, nb, a)
