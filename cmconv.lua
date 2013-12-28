@@ -5,7 +5,7 @@ script_description = "Change colors from BT.601 to BT.709."
 script_name_2 = "BT.601 -> BT.709 Global Color Fixer"
 script_description_2 = "Globally change colors from BT.601 to BT.709."
 script_author = "Daiz"
-script_version = "1.0.1"
+script_version = "1.0.2"
 
 local Rec601 = {
   Kr = 0.299,
@@ -81,7 +81,7 @@ function correct_global(subs, sel, active)
     if l.class == "info" then
       if l.key == "YCbCr Matrix" then
         if l.value == "TV.601" then
-          l.value == "TV.709"
+          l.value = "TV.709"
         end
       end
     end
