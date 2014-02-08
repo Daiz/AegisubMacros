@@ -12,20 +12,24 @@ If you have some scripts with colors matched to video with Aegisub's "Force BT.6
 
 To convert a BT.601 script to BT.709 correctly, you can simply run the global fixer without video open and save afterwards. If you have video open, you should run the script, reopen the video and only then save (if you save without reopening the video the header tag could still be incorrectly BT.601).
 
-## autoreplacer.lua - Autoreplacer
+## autoswapper.lua - Autoswapper
 
-You can use this to swap lines between two alternatives in an easy fashion. Consider the following lines:
+Autoswapper gives you several macros to perform swap operations on a script according to a specific syntax and control characters. Here's an example of the syntax using * as the control characters:
 
 ```
 Shiver me timbers, Jimmy{**-kun}!
 What is it, {*}Dad{*Otou-san}?
 ```
 
-By running the script, the lines turn into:
+By running the matching macro, the lines turn into:
 
 ```
 Shiver me timbers, Jimmy{*}-kun{*}!
 What is it, {*}Otou-san{*Dad}?
 ```
 
-By re-running the script, you get back to what it originally was. Simple as that.
+By re-running the macro, you get back to what it originally was. Simple as that.
+
+The script runs on the whole script by default, but it only performs swap operations on lines where the stylename includes either "Default", "Alternative" or "Overlap".
+
+The script also allows you to toggle lines on and off - if you put three control characters in the line's effect field (eg. ***) then the line will be made into a comment if it's not and into a regular line if it's a comment when the matching macro is ran. This check is done for all lines regardless of the style, and the toggle will only be performed if the effect field contains the three control characters and nothing else (so for example, `****` or `(23) *****` would not trigger a toggle).
