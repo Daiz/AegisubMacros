@@ -72,19 +72,19 @@ function verbal_tics(subs, selected, active)
 end
 
 aegisub.register_macro(
-  "Swap honorifics",
+  "Swap honorifics ( * )",
   "Swap the state of honorifics in the script. Character: *",
   honorifics
 )
 
 aegisub.register_macro(
-  "Swap mahjong terms",
+  "Swap mahjong terms ( / )",
   "Swap the state of mahjong terms in the script. Character: /",
   mahjong
 )
 
 aegisub.register_macro(
-  "Swap verbal tics",
+  "Swap verbal tics ( < )",
   "Swap the state of verbal tics in the script. Character: <",
   verbal_tics
 )
