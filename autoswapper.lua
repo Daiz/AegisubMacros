@@ -1,7 +1,7 @@
 script_name        = "Autoswapper"
 script_description = "Perform swap operations on a script."
 script_author      = "Daiz"
-script_version     = "1.0.0"
+script_version     = "1.0.1"
 
 function replace(c, subs)
 
@@ -20,7 +20,6 @@ function replace(c, subs)
     -- don't touch any non-event parts of the script
     if l.class == "dialogue" then
 
-      local t = l.text
       local s = l.style
       local e = l.effect
       local proceed = false
@@ -49,9 +48,11 @@ function replace(c, subs)
 
       end
 
-    subs[i] = l
+      subs[i] = l
 
     end
+
+  end
 
 end
 
@@ -61,12 +62,12 @@ function honorifics(subs, selected, active)
 end
 
 function mahjong(subs, selected, active)
-  replace("*", subs)
+  replace("/", subs)
   aegisub.set_undo_point("Swap mahjong terms")
 end
 
 function verbal_tics(subs, selected, active)
-  replace("*", subs)
+  replace("<", subs)
   aegisub.set_undo_point("Swap verbal tics")
 end
 
@@ -78,12 +79,12 @@ aegisub.register_macro(
 
 aegisub.register_macro(
   "Swap mahjong terms",
-  "Swap the state of mahjong terms in the script. Character: *",
+  "Swap the state of mahjong terms in the script. Character: /",
   mahjong
 )
 
 aegisub.register_macro(
   "Swap verbal tics",
-  "Swap the state of verbal tics in the script. Character: *",
+  "Swap the state of verbal tics in the script. Character: <",
   verbal_tics
 )
