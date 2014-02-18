@@ -1,7 +1,7 @@
 script_name = "CPS Calculator"
 script_description = "Calculates characters per second for lines."
 script_author = "Daiz"
-script_version = "1.0.0"
+script_version = "1.1.0"
 
 -- warning character
 local c = "*"
