@@ -41,7 +41,7 @@ function cps(subs, sel)
           :gsub("\\N","")
           :gsub("\\n","")
           :gsub("\\h","")
-          :gsub("[%.,%?!]","")
+          :gsub("[%.,%?!—–]","")
           :gsub("{[^}]-}","")
           :gsub(" ","")
   
