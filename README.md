@@ -4,6 +4,8 @@ This repository contains various small Aegisub Automation macros that I've writt
 
 ## cpscalc.lua - CPS Calculator
 
+**This script has been superceded by Aegisub implementing built-in CPS calculation based on my suggestion. Get revision 8185 or higher from [here](http://plorkyeran.com/aegisub/) to make use of it. It's awesome.**
+
 This script can be used to calculate the characters per second for dialogue. You can read about the importance of text length in subtitles [here](http://8ths.in/fantranslation-guide/) (look for the section **Make everything as simple as possible, but not simpler**). The script processes all lines by default where the style name matches either "Default", "Alternative" or "Overlap", and adds warnings for lines that go above 18 CPS. Note that this macro uses the effect field for the CPS value, but this should generally not be an issue since dialogue should practically never use the Effect field otherwise. You can and should rerun the script as you make edits, because it only updates the values when you run it. The script also comes with another macro that can be used to clean the effect field if desired.
 
 ## cmconv.lua - BT.601➡BT.709 Color Converter
