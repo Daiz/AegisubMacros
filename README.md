@@ -10,6 +10,8 @@ This script can be used to calculate the characters per second for dialogue. You
 
 ## cmconv.lua - BT.601➡BT.709 Color Converter
 
+**This script has also been superceded by Aegisub implementing built-in color matrix conversion in the "Resample resolution" dialog. Get revision 8365 or higher from [here](http://plorkyeran.com/aegisub/) to make use of it.**
+
 If you have some scripts with colors matched to video with Aegisub's "Force BT.601" setting turned on (currently on by default, but this will change in Aegisub at some point) and want to easily convert the colors to BT.709 (what your video most likely is if it isn't sourced from a DVD), this script does the job. Comes with two macros, one that only processes inline color definitions on selected lines, and one that alters all colors everywhere in the script (both in styles and lines).
 
 To convert a BT.601 script to BT.709 correctly, you can simply run the global fixer without video open and save afterwards. If you have video open, you should run the script, reopen the video and only then save (if you save without reopening the video the header tag could still be incorrectly BT.601).
