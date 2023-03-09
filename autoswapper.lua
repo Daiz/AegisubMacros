@@ -27,7 +27,9 @@ function replace(c, subs)
       -- replacements shouldn't happen for non-dialogue lines
       -- in order to avoid any unfortunate accidents
       if s:match("Default") then proceed = true end
-      if s:match("Alternative") then proceed = true end
+      if s:match("Main") then proceed = true end
+      if s:match("Dialogue") then proceed = true end
+      if s:match("Alt") then proceed = true end
       if s:match("Overlap") then proceed = true end
 
       --- toggle line comment status if effect field matches '***'
